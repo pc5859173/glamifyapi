@@ -1,0 +1,15 @@
+{% extends 'category/base.html' %}
+
+{% block title %}
+    Subcategory Detail - {{ subcategory.name }} - Glamify
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h1>{{ subcategory.name }}</h1>
+        {% if subcategory.image %}
+            <img src="{{ subcategory.image.url }}" alt="{{ subcategory.name }}" class="img-fluid">
+        {% endif %}
+        <!-- Add more details as needed -->
+    </div>
+{% endblock %}

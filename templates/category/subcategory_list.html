@@ -1,0 +1,29 @@
+<!-- category/category_list.html -->
+{% extends 'category/base.html' %}
+
+{% block title %}
+    Category List - Glamify
+{% endblock %}
+
+{% block content %}
+
+    </ul> <div class="container mt-4">
+        <h1>Subcategories of {{ category.name }}</h1>
+        <div class="row">
+            {% for subcategory in subcategories %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        {% comment %} <a href="{% url 'subcategory-details' category_id=category.id pk=subcategory.pk %}"> {% endcomment %}
+                        <a href="{% url 'product-list'%}">
+                            <img src="{{ subcategory.image.url }}" class="card-img-top" alt="{{ subcategory.name }}">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ subcategory.name }}</h5>
+                            <p class="card-text">{{ subcategory.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

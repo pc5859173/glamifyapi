@@ -1,0 +1,15 @@
+{% extends 'product/base.html' %}
+
+{% block title %}Update Product - Glamify{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Update Product</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Update Product</button>
+    </form>
+</div>
+{% endblock %}
+

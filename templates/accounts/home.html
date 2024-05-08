@@ -1,0 +1,124 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Home - Glamify{% endblock %}
+
+{% block content %}
+
+<style>
+.carousel-img {
+    height: 600px; /* Adjust the height as needed */
+}
+.welcome-heading {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #333;
+}
+
+</style>
+
+<section class="hero">
+    <div class="container">
+        <h1 class="welcome-heading"><b>Welcome to Glamify</b></h1>
+        <h5 class="welcome-heading">Explore Different categories, Products and brands here</h5>
+    </div>
+</section>
+<!-- Hero Section -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active ms-5">
+      <img class="d-block w-100 carousel-img" src="/media/home/carousel6.jpg" alt="First slide">
+    </div>
+</div> 
+<br>
+<br>
+
+<!-- Category Section -->
+<section class="category-section">
+    <div class="container">
+        <h1 class="welcome-heading">Featured Products</h1>
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/media/home/categorycard1.jpg" class="card-img-top" alt="Category 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Watches</h5>
+                        <p class="card-text">Explore our latest collection of Luxury Watches .</p>
+                        <a href="#" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/media/home/categorycard2.jpg" class="card-img-top" alt="Category 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Hand Bags</h5>
+                        <p class="card-text">Discover our exclusive Luxury Hand Bags .</p>
+                        <a href="#" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4">
+                <div class="card">
+                    <img src="/media/home/categorycard6.jpg" class="card-img-top" alt="Category 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Dresses</h5>
+                        <p class="card-text">Collection of different party wear dress .</p>
+                        <a href="#" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/media/home/categorycard3.jpg" class="card-img-top" alt="Category 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Diamond Jewelry</h5>
+                        <p class="card-text">Explore our latest collection of Jewelry diamond rings .</p>
+                        <a href="#" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/media/home/categorycard4.jpg" class="card-img-top" alt="Category 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Perfumes</h5>
+                        <p class="card-text">Choosing Perfect scent Perfume .</p>
+                        <a href="#" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-4">
+                <div class="card">
+                    <img src="/media/home/categorycard5.jpg" class="card-img-top" alt="Category 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Makeup</h5>
+                        <p class="card-text">Brushes, powder and makeup tools .</p>
+                        <a href="#" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<!-- Featured Products Section -->
+<section class="featured-products">
+    <div class="container">
+        <h1 class="welcome-heading">Featured Products</h1>
+        <!-- Add your featured products carousel or grid here -->
+        <p>Featured products will be displayed here.</p>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <h2>Testimonials</h2>
+        <!-- Add your testimonials or reviews here -->
+        <p>Testimonials from satisfied customers will be displayed here.</p>
+    </div>
+</section>
+{% endblock %}

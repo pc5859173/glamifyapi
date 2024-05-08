@@ -1,0 +1,49 @@
+{% extends 'product/base.html' %}
+{% block title %}Product List - Glamify{% endblock %}
+{% block content %}
+
+<h1>Product List</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for product in products %}
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Price: ₹{{ product.price }}</li>
+        <li class="list-group-item">Quantity: {{ product.quantity }}</li>
+      </ul>
+      <div class="card-body">
+        <a href="{% url 'product-details' pk=product.pk %}" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Pagination Links -->
+{% if products.has_other_pages %}
+<div class="pagination justify-content-center mt-4">
+  {% if products.has_previous %}
+  <a class="btn btn-outline-primary" href="?page=1">&laquo; First</a>
+  <a class="btn btn-outline-primary" href="?page={{ products.previous_page_number }}">Previous</a>
+  {% endif %}
+  {% for i in products.paginator.page_range %}
+  {% if products.number == i %}
+  <a class="btn btn-primary" href="?page={{ i }}">{{ i }}</a>
+  {% else %}
+  <a class="btn btn-outline-primary" href="?page={{ i }}">{{ i }}</a>
+  {% endif %}
+  {% endfor %}
+  {% if products.has_next %}
+  <a class="btn btn-outline-primary" href="?page={{ products.next_page_number }}">Next</a>
+  <a class="btn btn-outline-primary" href="?page={{ products.paginator.num_pages }}">Last &raquo;</a>
+  {% endif %}
+</div>
+{% endif %}
+
+{% endblock %}

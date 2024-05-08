@@ -1,0 +1,18 @@
+<!-- category/category_delete.html -->
+{% extends 'category/base.html' %}
+
+{% block title %}
+    Delete Category - Glamify
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Delete Category</h1>
+    <p>Are you sure you want to delete the category "{{ category.name }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a href="{% url 'category-list' %}" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

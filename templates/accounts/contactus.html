@@ -1,0 +1,39 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Home - Glamify{% endblock %}
+
+{% block content %}
+
+ <div class="container mt-4">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! If you have any questions, feedback, or concerns, please don't hesitate to get in touch with us.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Send us a Message</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3>Contact Information</h3>
+                <p>Email: info@glamify.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: 123 Glam St, City, Country</p>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

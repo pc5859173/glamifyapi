@@ -1,0 +1,88 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}About Us - Glamify{% endblock %}
+
+{% block content %}
+
+<style>
+/* Custom styles for About Us page */
+.about-section {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Light gray background */
+}
+.about-heading {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.about-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    text-align: justify;
+}
+.team-member-card {
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+}
+.team-member-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.team-member-info {
+    padding: 20px;
+    background-color: #fff;
+}
+.team-member-name {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+.team-member-role {
+    font-size: 14px;
+    color: #666;
+}
+</style>
+
+<div class="container mt-4">
+    <div class="about-section">
+        <h1 class="about-heading">About Us</h1>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <p class="about-text">Welcome to Glamify, your ultimate destination for all things glamorous! We strive to provide high-quality products and exceptional customer service to make your shopping experience delightful.</p>
+                <p class="about-text">At Glamify, we believe that everyone deserves to feel confident and beautiful. Our curated collection of fashion, electronics, and more is designed to help you express your unique style and elevate your lifestyle.</p>
+                <p class="about-text">Our team is dedicated to staying ahead of the latest trends and delivering the hottest products right to your doorstep. Whether you're shopping for yourself or searching for the perfect gift, we've got you covered.</p>
+                <p class="about-text">Thank you for choosing Glamify. We look forward to helping you shine!</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="team-member-card">
+                    <img src="/media/accounts/aboutus1.jpg" class="team-member-img" alt="Team Member 1">
+                    <div class="team-member-info">
+                        <h5 class="team-member-name">Priya Patil</h5>
+                        <p class="team-member-role">Website Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="team-member-card">
+                    <img src="/media/accounts/aboutus2.jpg" class="team-member-img" alt="Team Member 2">
+                    <div class="team-member-info">
+                        <h5 class="team-member-name">Kunal Patil</h5>
+                        <p class="team-member-role">Marketing Manager</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

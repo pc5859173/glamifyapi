@@ -1,0 +1,123 @@
+{% extends 'accounts/base1.html' %}
+
+{% block title %}Login - Glamify{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url('/media/category_images/clothing.jpg'); /* Replace with your image path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .card-title {
+        text-align: center;
+    }
+
+    .form-label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .form-check-label {
+        color: #333;
+    }
+
+    .additional-links {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .additional-links a {
+        color: #007bff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .additional-links a:hover {
+        text-decoration: underline;
+    }
+
+    .social-login {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .social-login .btn {
+        margin: 5px;
+        width: 100%;
+    }
+
+    .social-login .btn-google {
+        background-color: #db4437;
+        color: #fff;
+    }
+
+    .social-login .btn-google:hover {
+        background-color: #c23321;
+    }
+
+    .social-login .btn-facebook {
+        background-color: #3b5998;
+        color: #fff;
+    }
+
+    .social-login .btn-facebook:hover {
+        background-color: #2d4373;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="card-title mb-0">Login</h5>
+                </div>
+                <div class="card-body">
+                    <form action="/login" method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label"><i class="fas fa-envelope"></i> Email Address</label>
+                            <input type="email" class="form-control" id="inputEmail" name="username" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputPassword" class="form-label"><i class="fas fa-lock"></i> Password</label>
+                            <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100">Login</button>
+                    </form>
+                     <div class="additional-links mt-3">
+                        <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                        <a href="{% url 'signup' %}">Create an Account</a>
+                    </div>
+                    <div class="social-login mt-3">
+                        <button class="btn btn-google"><i class="fab fa-google"></i> Sign in with Google</button>
+                        <button class="btn btn-facebook"><i class="fab fa-facebook-f"></i> Sign in with Facebook</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br><br>
+{% endblock %}

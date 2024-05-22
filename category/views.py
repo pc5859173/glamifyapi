@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, redirect, render
 from .models import Category, Subcategory
-from product.models import Product
+from product.models import Product, Category
 from .forms import CategoryForm, SubcategoryForm
 
 def category_list(request):

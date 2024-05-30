@@ -5,20 +5,6 @@ from .forms import ProductForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 
-# def product_list(request):
-#     products = Product.objects.all()
-#     # return render(request, 'product/product_list.html', {'products': products})
-#     paginator = Paginator(products, 3)  # 10 items per page
-#     page = request.GET.get('page')
-#     try:
-#         products = paginator.page(page)
-#     except PageNotAnInteger:
-#         products = paginator.page(1)
-#     except EmptyPage:
-#         products = paginator.page(paginator.num_pages)
-    
-#     return render(request, 'product/product_list.html', {'products': products})
-
 def product_list(request):
     query = request.GET.get('query')
     if query:
